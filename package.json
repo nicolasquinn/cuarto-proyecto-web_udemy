@@ -1,0 +1,24 @@
+{
+  "name": "festivalmusica_inicio",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS y HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasquinn/cuarto-proyecto-web_udemy.git"
+  },
+  "keywords": [
+    "HTML",
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Nicolas Quinn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy/issues"
+  },
+  "homepage": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy#readme"
+}
