@@ -9,6 +9,22 @@
 }
 
 .navegacion-principal {
+
+    background-color: red; // Inferior a 480px.
+
+    @include m.phone {
+        background-color: blue;
+    }
+    @include m.tablet {
+        background-color: green;
+    }
+    @include m.desktop {
+        background-color: black;
+    }
+    @include m.desktopXL {
+        background-color: violet;
+    }
+
     a {
         color: v.$blanco;
         font-size: 2.4rem;
@@ -25,5 +41,4 @@
 // .pruebaDos {
 //     @include m.heading;
 // }
-
 
