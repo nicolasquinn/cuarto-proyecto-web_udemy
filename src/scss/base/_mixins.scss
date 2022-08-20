@@ -1,6 +1,13 @@
-@mixin heading {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    color: black;
-    letter-spacing: 1px;
-}
+@use 'base/variables' as v;
+
+// @mixin heading($color: blue, $border-radius: false) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color;
+//     letter-spacing: 1px;
+//     background-color: v.$negro;
+
+//     @if $border-radius {
+//         border-radius: 1rem;
+//     }
+// }
