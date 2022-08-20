@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy/issues"
   },
-  "homepage": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy#readme"
+  "homepage": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy#readme",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  }
 }
