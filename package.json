@@ -26,7 +26,8 @@
   "homepage": "https://github.com/nicolasquinn/cuarto-proyecto-web_udemy#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0", 
-    "sass": "^1.54.5" 
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.5"
   }
 }
