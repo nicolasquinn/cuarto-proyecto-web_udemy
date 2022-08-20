@@ -1,4 +1,5 @@
-$rojo: blue;
+@import 'base/variables'; // Importo el archivo, en este voy a poner todas las variables como por ej. $rojo.
+@import 'contenido/contenido'; // A partir de acá, todos los archivos van a tener disponible la variable $rojo, es como en cascada.
 
 body {
     background-color: $rojo;
