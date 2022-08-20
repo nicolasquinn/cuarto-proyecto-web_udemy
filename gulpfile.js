@@ -3,7 +3,7 @@ const sass = require("gulp-sass")(require('sass')) // Esto lo que hace es usar g
 
 function css(callback) {
 
-    src('src/scss/app.scss') // Importo/identifico la ruta del archivo SCSS a compilar, a su vez pongo un pipe.
+    src('src/scss/**/*.scss') // Importo/identifico la ruta del archivo SCSS a compilar, a su vez pongo un pipe.
         .pipe(sass()) // Aplico SASS/compilación
         .pipe(dest("build/css")) // Envío/guardo todo lo compilado en la ruta asignada.
         
@@ -11,7 +11,7 @@ function css(callback) {
 }
 
 function dev(callback) { // Creo la función Watch para compilar en "vivo"
-    watch('src/scss/app.scss', css) // Ejecuto la función indicando primero la ubicación del archivo y la función de compilación a ejecutar
+    watch('src/scss/**/*.scss', css) // Ejecuto la función indicando primero la ubicación del archivo y la función de compilación a ejecutar
 
     callback()
 }
