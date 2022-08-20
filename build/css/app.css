@@ -359,34 +359,41 @@ h3 {
 }
 .header h1 {
   color: #FFFFFF;
-}
-
-.navegacion-principal {
-  background-color: red;
-}
-@media (min-width: 480px) {
-  .navegacion-principal {
-    background-color: blue;
-  }
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .navegacion-principal {
-    background-color: green;
+  .header h1 {
+    margin: 0;
   }
 }
-@media (min-width: 992px) {
-  .navegacion-principal {
-    background-color: black;
+.header .contenido-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
   }
 }
-@media (min-width: 1200px) {
+
+@media (min-width: 768px) {
   .navegacion-principal {
-    background-color: violet;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
 }
 .navegacion-principal a {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
   color: #FFFFFF;
   font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+  .navegacion-principal a {
+    margin: 0;
+  }
 }
 .navegacion-principal a:hover {
   color: #FEF46D;
