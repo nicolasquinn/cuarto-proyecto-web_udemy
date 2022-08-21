@@ -9,6 +9,7 @@ const plumber = require("gulp-plumber");
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const avif = require("gulp-avif");
 
 function css(callback) {
 
@@ -43,6 +44,16 @@ function versionWebp(callback) {
 
 }
 
+function versionAvif(callback) {
+    const opciones = {
+        quality: 50
+    }
+    src('src/img/**/*.{jpg,png}')
+        .pipe(avif(opciones))
+        .pipe(dest('build/img'))
+    callback();
+}
+
 function dev(callback) { // Creo la función Watch para compilar en "vivo"
 
     watch('src/scss/**/*.scss', css); // Ejecuto la función indicando primero la ubicación del archivo y la función de compilación a ejecutar
@@ -53,4 +64,5 @@ function dev(callback) { // Creo la función Watch para compilar en "vivo"
 exports.css = css; // Llamo la función con la sintaxis de Node exports.
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
-exports.dev = parallel(imagenes, versionWebp, dev);
+exports.versionAvif = versionAvif;
+exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
