@@ -1,6 +1,12 @@
-const {src, dest, watch} = require("gulp"); // Llamo a las funciones de GULP
+// Funciones Gulp
+const {src, dest, watch, parallel} = require("gulp"); // Llamo a las funciones de GULP
+
+// Compilación CSS
 const sass = require("gulp-sass")(require('sass')); // Esto lo que hace es usar gulp-sass, pero en realidad lo que hace es ir y buscar la dependencia SASS que es la que tiene todo el "conocimiento"
 const plumber = require("gulp-plumber");
+
+// Imágenes 
+const webp = require("gulp-webp");
 
 function css(callback) {
 
@@ -8,7 +14,16 @@ function css(callback) {
         .pipe(plumber())
         .pipe(sass()) // Aplico SASS/compilación
         .pipe(dest("build/css")) // Envío/guardo todo lo compilado en la ruta asignada.
-        
+    callback();
+}
+
+function versionWebp(callback) {
+    const opciones = {
+        quality: 50
+    }
+    src('src/img/**/*.{jpg,png}')
+        .pipe(webp(opciones))
+        .pipe(dest('build/img'))
     callback();
 }
 
@@ -19,5 +34,7 @@ function dev(callback) { // Creo la función Watch para compilar en "vivo"
 }
 
 
+
 exports.css = css; // Llamo la función con la sintaxis de Node exports.
-exports.dev = dev;
+exports.versionWebp = versionWebp;
+exports.dev = parallel(versionWebp, dev);
