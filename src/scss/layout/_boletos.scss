@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boletos {
+    padding: 5rem;
+    background-color: v.$verde;
+    h3, p, footer, header {
+        color: v.$blanco;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+
+.contenido-boletos {
+
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+}
+
+.pase {
+    p {
+        background-color: v.$verde;
+        text-align: center;
+        margin: 0;
+        padding: 2rem;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+    header {
+        background-color: v.$rosa;
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+    footer {
+        background-color: v.$morado;
+        padding: 2rem;
+        font-size: 3rem;
+    }
+    header, footer {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    ul {
+        @include m.lista;
+    }
+    li {
+        padding: 2rem;
+        border-bottom: 1px solid rgba(169, 169, 169, 0.626);
+        background-color: v.$blanco;
+    }
+}

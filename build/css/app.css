@@ -616,3 +616,55 @@ img {
 .btn-cerrar:hover {
   cursor: pointer;
 }
+
+.boletos {
+  padding: 5rem;
+  background-color: #4CB8B3;
+}
+.boletos h3, .boletos p, .boletos footer, .boletos header {
+  color: #FFFFFF;
+}
+.boletos h3 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenido-boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.pase p {
+  background-color: #4CB8B3;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.pase header {
+  background-color: #F53756;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+.pase footer {
+  background-color: #752F97;
+  padding: 2rem;
+  font-size: 3rem;
+}
+.pase header, .pase footer {
+  text-align: center;
+  text-transform: uppercase;
+}
+.pase ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase li {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(169, 169, 169, 0.626);
+  background-color: #FFFFFF;
+}
