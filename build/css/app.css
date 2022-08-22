@@ -322,6 +322,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -598,4 +601,18 @@ img {
 .overlay picture {
   display: block;
   max-width: 80rem;
+}
+
+.btn-cerrar {
+  background-color: #FFFFFF;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: #000000;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}
+.btn-cerrar:hover {
+  cursor: pointer;
 }

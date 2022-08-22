@@ -30,10 +30,28 @@ function mostrarImagen(id) { // Creo la función con un parámetro
     <source srcset="build/img/grande/${id}.webp" type="image/webp">
     <img loading="lazy" width="200" height="300" src="build/img/grande/${id}.jpg" alt="Imagen galería">      
     `;
-    const overlay = document.createElement('DIV');
-    overlay.appendChild(imagen);
-    overlay.classList.add('overlay');
 
-    const body = document.querySelector('body');
+    // Overlay
+    const overlay = document.createElement('DIV')
+    overlay.appendChild(imagen)
+    overlay.classList.add('overlay')
+    overlay.onclick = function() {
+        overlay.remove()
+        body.classList.remove('fijar-body')
+    }
+
+    // Boton para cerrar
+    const cerrarModal = document.createElement('P')
+    cerrarModal.textContent = "X"
+    cerrarModal.classList.add('btn-cerrar')
+    overlay.appendChild(cerrarModal)
+    cerrarModal.onclick = function() {
+        overlay.remove()
+        body.classList.remove('fijar-body')
+    }
+
+    // Crear imagen con overlay
+    const body = document.querySelector('body')
     body.appendChild(overlay)
+    body.classList.add('fijar-body')
 }
