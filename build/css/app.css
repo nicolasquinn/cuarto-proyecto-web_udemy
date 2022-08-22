@@ -490,6 +490,7 @@ img {
 .lineup .dia {
   text-transform: uppercase;
   margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -525,10 +526,29 @@ img {
   background-image: url(../img/icono_rock.png);
 }
 
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  font-weight: bold;
+  padding: 2.5rem;
+}
+.calendario li span {
+  font-weight: normal;
+}
+
 .bg-amarillo {
   background-color: #FEF46D;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: #fdec08;
 }
 
 .bg-verde {
   background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #3b9691;
 }

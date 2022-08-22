@@ -13,6 +13,7 @@
     .dia {
         text-transform: uppercase;
         margin-bottom: 5rem;
+        margin-top: 5rem;
     }
 
 }
@@ -30,7 +31,7 @@
 
 .escenario {
     padding-top: 2rem;
-    
+
     .nombre-escenario {
         &:after {
             content: '';
@@ -53,10 +54,29 @@
     background-image: url(../img/icono_rock.png);
 }
 
+.calendario {
+    @include m.lista;
+
+    li {
+        font-weight: bold;
+        padding: 2.5rem;
+        span {
+            font-weight: normal;
+        }
+    }
+}
+
 .bg-amarillo {
     background-color: v.$amarillo;
+
+    li:nth-child(odd) {
+        background-color: darken(v.$amarillo, 20%);
+    }
 }
 
 .bg-verde {
     background-color: v.$verde;
+    li:nth-child(odd) {
+        background-color: darken(v.$verde, 10%);
+    }
 }
