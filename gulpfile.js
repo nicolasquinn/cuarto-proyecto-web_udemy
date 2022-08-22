@@ -54,15 +54,23 @@ function versionAvif(callback) {
     callback();
 }
 
+function javascript(callback) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'))
+    callback();
+}
+
 function dev(callback) { // Creo la función Watch para compilar en "vivo"
 
     watch('src/scss/**/*.scss', css); // Ejecuto la función indicando primero la ubicación del archivo y la función de compilación a ejecutar
+    watch('src/js/**/*.js', javascript);
     callback();
 
 }
 
 exports.css = css; // Llamo la función con la sintaxis de Node exports.
+exports.javascript = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
